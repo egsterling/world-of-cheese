@@ -9,56 +9,87 @@
     <title>Document</title>
 </head>
     <body>
+        <a class="skipper" href="#main">Skip to Main Content</a>
         <header>
-            <nav>
+            <nav class="head">
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><a href="gallery.html">Cheese Gallery</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#main">Skip to Main Content</a></li>
                 </ul>
             </nav>
-            <h1>Cheese Gallery</h1>
         </header>
         <main id="main">
+            <h1>Cheese Gallery</h1>
+            <div class="text top">Here you can check out some of our famous cheese,
+                and even purchase a cheese sampler of your own!</div>
+            <h2>Cheese We Offer</h2>
             <div class="gallery">
                 <div>
+                    <h3 class="cheesename">Brie Cheese</h3>
                     <img src="images/brie.jpg" alt="brie cheese">
-                    <p>Brie Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Cheddar Cheese</h3>
                     <img src="images/cheddar.jpg" alt="cheddar cheese">
-                    <p>Cheddar Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Gouda Cheese</h3>
                     <img src="images/gouda.jpg" alt="gouda cheese">
-                    <p>Gouda Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Jarlsberg Cheese</h3>
                     <img src="images/jarlsberg.jpg" alt="jarlsberg cheese">
-                    <p>Jarlsberg Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Mozzarella Cheese</h3>
                     <img src="images/mozz.jpg" alt="mozzarella cheese">
-                    <p>Mozzarella Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Provolone Cheese</h3>
                     <img src="images/provolone.jpg" alt="provolone cheese">
-                    <p>Provolone Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Parmesan Cheese</h3>
                     <img src="images/parmesan.jpg" alt="parmesan cheese">
-                    <p>Parmesan Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Swiss Cheese</h3>
                     <img src="images/swiss.jpg" alt="swiss cheese">
-                    <p>Swiss Cheese</p>
                 </div>
                 <div>
+                    <h3 class="cheesename">Feta Cheese</h3>
                     <img src="images/feta.jpg" alt="feta cheese">
-                    <p>Feta Cheese</p>
                 </div>
             </div>
+            <h2>The Cheese Sampler</h2>
+            <div class="text">Purchase our delicious cheese sampler for just $19.99!</div>
+            <div class="purchase_flex">
+                <img class="impact" src="images/sampler.webp" alt="image of our cheese sampler">
+                <div class="purchase">
+                    <button id="add">Add 1 to cart</button>
+                    <button id="remove">Remove 1 from cart</button>
+                    <button id="remove_all">Remove all</button>
+                    <p class="total">Cart total:&nbsp;&nbsp;<span id="cart_total"></span></p>
+                    <p class="total">Total cost:&nbsp;&nbsp;<span id="total_cost"></span></p>
+                    <p class="total bold">Select a location for pickup:</p>
+                    <form class="location">
+                        <input type="radio" id="milwaukee" name="location" value="Milwaukee">
+                        <label for="milwaukee">Milwaukee, WI</label><br>
+                        <input type="radio" id="newYork" name="location" value="NY">
+                        <label for="newYork">New York, NY</label><br>
+                        <input type="radio" id="losAngeles" name="location" value="LA">
+                        <label for="losAngeles">Los Angeles, CA</label>
+                    </form>
+                    <br>
+                    <button id="purchase">Finalize purchase</button>
+                    <p class="total" id="confirmation"></p>
+                </div>
+            </div>
+            <script src="js/purchase.js"></script>
         </main>
+        <footer>
+            <div>Created by Ethan Sterling</div>
+        </footer>
     </body>
 </html>

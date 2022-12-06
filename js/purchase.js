@@ -14,43 +14,42 @@ function radioClick() {
 }
 
 window.addEventListener("load", function() {
-	console.log("Good job opening the window");
     totalItems = 0;
     this.document.getElementById("remove").style.display = "none";
-    this.document.getElementById("remove_all").style.display = "none";
+    this.document.getElementById("remove-all").style.display = "none";
     this.document.getElementById("purchase").style.display = "none";
-    showChange(this.document.getElementById("cart_total"), this.document.getElementById("total_cost"));
+    showChange(this.document.getElementById("cart-total"), this.document.getElementById("total-cost"));
 });
 
 document.getElementById("add").addEventListener("click", function() {
     document.getElementById("confirmation").innerHTML = "";
     totalItems += 1;
     document.getElementById("remove").style.display = "inline-block";
-    document.getElementById("remove_all").style.display = "inline-block";
+    document.getElementById("remove-all").style.display = "inline-block";
     if(document.getElementById("milwaukee").checked ||
-       document.getElementById("newYork").checked ||
-       document.getElementById("losAngeles").checked) {
+       document.getElementById("new-york").checked ||
+       document.getElementById("los-angeles").checked) {
         document.getElementById("purchase").style.display = "inline-block";
     }
-    showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
+    showChange(document.getElementById("cart-total"), document.getElementById("total-cost"));
 });
 
 document.getElementById("remove").addEventListener("click", function() {
     totalItems -= 1;
     if(totalItems === 0) {
         this.style.display = "none";
-        document.getElementById("remove_all").style.display = "none";
+        document.getElementById("remove-all").style.display = "none";
         document.getElementById("purchase").style.display = "none";
     }
-    showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
+    showChange(document.getElementById("cart-total"), document.getElementById("total-cost"));
 });
 
-document.getElementById("remove_all").addEventListener("click", function() {
+document.getElementById("remove-all").addEventListener("click", function() {
     totalItems = 0;
     this.style.display = "none";
     document.getElementById("remove").style.display = "none";
     document.getElementById("purchase").style.display = "none";
-    showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
+    showChange(document.getElementById("cart-total"), document.getElementById("total-cost"));
 });
 
 document.getElementById("milwaukee").addEventListener("click", function() {
@@ -58,12 +57,12 @@ document.getElementById("milwaukee").addEventListener("click", function() {
     radioClick();
 });
 
-document.getElementById("newYork").addEventListener("click", function() {
+document.getElementById("new-york").addEventListener("click", function() {
     loc = "New York, NY";
     radioClick();
 });
 
-document.getElementById("losAngeles").addEventListener("click", function() {
+document.getElementById("los-angeles").addEventListener("click", function() {
     loc = "Los Angeles, California";
     radioClick();
 });
@@ -76,7 +75,7 @@ document.getElementById("purchase").addEventListener("click", function() {
         "Feel free to make another purchase if you'd like!"
     totalItems = 0;
     document.getElementById("remove").style.display = "none";
-    document.getElementById("remove_all").style.display = "none";
+    document.getElementById("remove-all").style.display = "none";
     document.getElementById("purchase").style.display = "none";
-    showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
+    showChange(document.getElementById("cart-total"), document.getElementById("total-cost"));
 });

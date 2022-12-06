@@ -9,28 +9,28 @@ function showChange(cartTotal, totalCost) {
 
 function radioClick() {
     if(totalItems > 0) {
-        document.getElementById("purchase").disabled = false;
+        document.getElementById("purchase").style.display = "inline-block";
     }
 }
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
     totalItems = 0;
-    this.document.getElementById("remove").disabled = true;
-    this.document.getElementById("remove_all").disabled = true;
-    this.document.getElementById("purchase").disabled = true;
+    this.document.getElementById("remove").style.display = "none";
+    this.document.getElementById("remove_all").style.display = "none";
+    this.document.getElementById("purchase").style.display = "none";
     showChange(this.document.getElementById("cart_total"), this.document.getElementById("total_cost"));
 });
 
 document.getElementById("add").addEventListener("click", function() {
     document.getElementById("confirmation").innerHTML = "";
     totalItems += 1;
-    document.getElementById("remove").disabled = false;
-    document.getElementById("remove_all").disabled = false;
+    document.getElementById("remove").style.display = "inline-block";
+    document.getElementById("remove_all").style.display = "inline-block";
     if(document.getElementById("milwaukee").checked ||
        document.getElementById("newYork").checked ||
        document.getElementById("losAngeles").checked) {
-        document.getElementById("purchase").disabled = false;
+        document.getElementById("purchase").style.display = "inline-block";
     }
     showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
 });
@@ -38,18 +38,18 @@ document.getElementById("add").addEventListener("click", function() {
 document.getElementById("remove").addEventListener("click", function() {
     totalItems -= 1;
     if(totalItems === 0) {
-        this.disabled = true;
-        document.getElementById("remove_all").disabled = true;
-        document.getElementById("purchase").disabled = true;
+        this.style.display = "none";
+        document.getElementById("remove_all").style.display = "none";
+        document.getElementById("purchase").style.display = "none";
     }
     showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
 });
 
 document.getElementById("remove_all").addEventListener("click", function() {
     totalItems = 0;
-    this.disabled = true;
-    document.getElementById("remove").disabled = true;
-    document.getElementById("purchase").disabled = true;
+    this.style.display = "none";
+    document.getElementById("remove").style.display = "none";
+    document.getElementById("purchase").style.display = "none";
     showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
 });
 
@@ -75,8 +75,8 @@ document.getElementById("purchase").addEventListener("click", function() {
         "for $" + (19.99 * totalItems).toFixed(2) + " will be ready for pickup in our " + loc + " location by tomorrow! " +
         "Feel free to make another purchase if you'd like!"
     totalItems = 0;
-    document.getElementById("remove").disabled = true;
-    document.getElementById("remove_all").disabled = true;
-    document.getElementById("purchase").disabled = true;
+    document.getElementById("remove").style.display = "none";
+    document.getElementById("remove_all").style.display = "none";
+    document.getElementById("purchase").style.display = "none";
     showChange(document.getElementById("cart_total"), document.getElementById("total_cost"));
 });

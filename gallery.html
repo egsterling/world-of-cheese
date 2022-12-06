@@ -9,8 +9,8 @@
     <title>Document</title>
 </head>
     <body>
-        <a class="skipper" href="#main">Skip to Main Content</a>
         <header>
+            <a class="skipper" href="#main">Skip to Main Content</a>
             <nav class="head">
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
@@ -81,22 +81,22 @@
             <h2>The Cheese Sampler</h2>
             <div class="text">Purchase our delicious cheese sampler for just $19.99!</div>
             <div class="purchase_flex">
-                <img class="sampler" src="images/sampler.webp" alt="image of our cheese sampler">
+                <img class="sampler" src="images/sampler.webp" alt="a World of Cheese cheese sampler">
                 <div class="purchase">
                     <button id="add">Add 1 to cart</button>
                     <button id="remove">Remove 1 from cart</button>
                     <button id="remove_all">Remove all</button>
                     <p class="total">Cart total:&nbsp;&nbsp;<span id="cart_total"></span></p>
                     <p class="total">Total cost:&nbsp;&nbsp;<span id="total_cost"></span></p>
-                    <p class="total bold">Select a location for pickup:</p>
-                    <form class="location">
+                    <fieldset>
+                        <legend class="total bold">Select a location for pickup:</legend>
                         <input type="radio" id="milwaukee" name="location" value="Milwaukee">
                         <label for="milwaukee">Milwaukee, WI</label><br>
                         <input type="radio" id="newYork" name="location" value="NY">
                         <label for="newYork">New York, NY</label><br>
                         <input type="radio" id="losAngeles" name="location" value="LA">
                         <label for="losAngeles">Los Angeles, CA</label>
-                    </form>
+                    </fieldset>
                     <br>
                     <button id="purchase">Finalize purchase</button>
                     <p class="total" id="confirmation"></p>
